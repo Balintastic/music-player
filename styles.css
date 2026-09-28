@@ -49,6 +49,17 @@ h2 {
     margin: 0;
 }
 
+.info {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
 p {
     padding: 0;
     margin: 0;
@@ -72,7 +83,7 @@ input[type=range] {
 
 button {
     background-color: rgba(0, 0, 0, .5);
-    border: solid  transparent 1px;
+    border: solid transparent 1px;
     border-radius: 100%;
 
     width: 50px;
