@@ -54,7 +54,14 @@ p {
     margin: 0;
 }
 
-progress {
+input[type=range] {
     width: 80%;
     margin: 10px;
+}
+
+.playback-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
