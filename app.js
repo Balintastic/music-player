@@ -9,12 +9,29 @@ function playAudio(event) {
     event.preventDefault();
 
     // play or pause audio
-    if (audio.paused) audio.play();
-    else audio.pause();
+    const pauseIcon = "fa-solid fa-pause fa-3x";
+    const playIcon = "fa-solid fa-play fa-3x";
+    const playbackIcon = document.querySelector("#playback-icon")
+    if (audio.paused){ 
+        audio.play();
+        playbackIcon.classList.replace("fa-play", "fa-pause");
+    }
+    else {
+        audio.pause();
+        playbackIcon.classList.replace("fa-pause", "fa-play");
+    }
 }
 
 // previous button
+const prevButton = document.querySelector(".playback-previous");
+prevButton.addEventListener("click", prevAudio);
 
+function prevAudio(event) {
+    event.preventDefault();
+
+    // go to beginning of audio
+    audio.currentTime = 0;
+}
 
 
 // Update the slider
